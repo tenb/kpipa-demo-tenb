@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+:root {
+  --paper: #faf7f2;
+  --ink: #1f1b16;
+  --accent: #8a5a2b;
+}
+
+html {
+  background: var(--paper);
+}
+
+body {
+  color: var(--ink);
+  font-family: "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", system-ui, sans-serif;
+}
+
+.reading-body {
+  font-family: "Noto Serif KR", "Apple SD Gothic Neo", serif;
+  font-size: 1.25rem;
+  line-height: 2.05;
+  letter-spacing: -0.003em;
+  word-break: keep-all;
+}
+
+.reading-body p::selection,
+.reading-body ::selection {
+  background: rgba(196, 148, 90, 0.35);
+}
+
+.para-highlight {
+  animation: flash 2.2s ease-out;
+  border-radius: 6px;
+}
+
+@keyframes flash {
+  0% { background: rgba(196, 148, 90, 0.45); }
+  100% { background: transparent; }
+}
+
+.log-line {
+  font-variant-numeric: tabular-nums;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+.pulse-dot { animation: pulse-dot 1.2s infinite; }

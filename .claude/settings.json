@@ -1,0 +1,35 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -sL \"https://ko.wikisource.org/w/api.php?action=query&prop=extracts&explaintext=1&format=json&titles=%EC%9A%B4%EC%88%98%20%EC%A2%8B%EC%9D%80%20%EB%82%A0\" -o /private/tmp/claude-501/-Users-yunjae-Documents-Github-kpipa-demo/59c844fc-fd8e-45f9-ba97-6afea26da314/scratchpad/unsu.json)",
+      "Bash(node -e ' *)",
+      "Bash(curl -s http://localhost:3000/api/works)",
+      "Bash(curl -s http://localhost:3000/api/works/unsu-joeun-nal/status)",
+      "Bash(node -e \"let d='';process.stdin.on\\('data',c=>d+=c\\).on\\('end',\\(\\)=>{const s=JSON.parse\\(d\\);console.log\\('phase:',s.phase,'done:',s.done\\);s.logs.forEach\\(l=>console.log\\('-',l.phase,'|',l.message\\)\\)}\\)\")",
+      "Bash(curl -s -X POST http://localhost:3000/api/works/unsu-joeun-nal/explain -H 'content-type: application/json' -d '{\"selection\":{\"text\":\"김첨지에게\",\"offset\":120},\"unit\":\"word\",\"readingPosition\":10350,\"spoilerBlock\":true}')",
+      "Bash(node -e \"let d='';process.stdin.on\\('data',c=>d+=c\\).on\\('end',\\(\\)=>{const r=JSON.parse\\(d\\);console.log\\('grounded:',r.grounded,'cards:',r.glossaryCards.map\\(g=>g.name+'/'+g.type\\).join\\(','\\),'citations:',r.citations.length,'filtered:',JSON.stringify\\(r.spoilerFiltered\\)\\);console.log\\('explanation:',r.explanation.slice\\(0,150\\)\\)}\\)\")",
+      "Bash(curl -s -X POST http://localhost:3000/api/works/unsu-joeun-nal/explain -H 'content-type: application/json' -d '{\"selection\":{\"text\":\"치삼\",\"offset\":500},\"unit\":\"word\",\"readingPosition\":1000,\"spoilerBlock\":true}')",
+      "Bash(node -e \"let d='';process.stdin.on\\('data',c=>d+=c\\).on\\('end',\\(\\)=>{const r=JSON.parse\\(d\\);console.log\\('grounded:',r.grounded,'cards:',r.glossaryCards.length,'filtered:',JSON.stringify\\(r.spoilerFiltered\\)\\);console.log\\('explanation:',r.explanation.slice\\(0,100\\)\\)}\\)\")",
+      "Bash(curl -s -X POST http://localhost:3000/api/works/unsu-joeun-nal/explain -H 'content-type: application/json' -d '{\"selection\":{\"text\":\"컬컬한 목에 모주 한 잔도 적실 수 있거니와 그보다도 앓는 아내에게 설렁탕 한 그릇도 사다 줄 수 있음이다.\",\"offset\":600},\"unit\":\"sentence\",\"readingPosition\":10350,\"spoilerBlock\":true,\"evalMode\":true}')",
+      "Bash(node -e \"let d='';process.stdin.on\\('data',c=>d+=c\\).on\\('end',\\(\\)=>{const r=JSON.parse\\(d\\);console.log\\('grounded:',r.grounded,'cards:',r.glossaryCards.map\\(g=>g.name\\).join\\(','\\),'citations:',r.citations.length\\)}\\)\")",
+      "Bash(curl -s \"http://localhost:3000/api/works/unsu-joeun-nal/eval?format=csv\")",
+      "mcp__plugin_playwright_playwright__browser_navigate",
+      "mcp__plugin_playwright_playwright__browser_take_screenshot",
+      "mcp__plugin_playwright_playwright__browser_evaluate",
+      "Bash(curl -s -X POST http://localhost:3000/api/works/unsu-joeun-nal/explain -H 'content-type: application/json' -d '{\"selection\":{\"text\":\"치삼\",\"offset\":7000},\"unit\":\"word\",\"readingPosition\":10350}')",
+      "Bash(node -e \"let d='';process.stdin.on\\('data',c=>d+=c\\).on\\('end',\\(\\)=>{const r=JSON.parse\\(d\\);console.log\\('model:',r.model\\);console.log\\('cards:',r.glossaryCards.map\\(g=>g.name\\).join\\(','\\),'citations:',r.citations.length\\);console.log\\(r.explanation.slice\\(0,200\\)\\)}\\)\")",
+      "Bash(curl -s -X POST http://localhost:3000/api/works/unsu-joeun-nal/chat -H 'content-type: application/json' -d '{\"sessionId\":\"live-1\",\"message\":\"김 첨지는 왜 아내에게 화를 내나요?\",\"readingPosition\":10350,\"selectionText\":\"김 첨지\",\"selectionOffset\":260}')",
+      "Bash(node -e \"let d='';process.stdin.on\\('data',c=>d+=c\\).on\\('end',\\(\\)=>{const r=JSON.parse\\(d\\);console.log\\('answer:',r.answer.slice\\(0,250\\)\\);console.log\\('citations:',r.citations.length\\)}\\)\")",
+      "mcp__plugin_playwright_playwright__browser_close",
+      "Bash(rm -rf data/w-* .playwright-mcp)",
+      "Bash(curl -s -X DELETE http://localhost:3000/api/works/unsu-joeun-nal/eval)",
+      "Bash(mv capture-*.png captures/)",
+      "Bash(gh auth *)",
+      "Bash(gh repo *)",
+      "Bash(git init *)",
+      "Bash(git remote *)",
+      "Bash(git ls-tree *)",
+      "Bash(railway whoami *)"
+    ]
+  }
+}
